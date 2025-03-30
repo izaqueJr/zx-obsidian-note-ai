@@ -1,0 +1,81 @@
+{
+  "name": "zx-obsidian-note-ai",
+  "displayName": "ZX - Obsidian Note AI 📓🤖",
+  "description": "Salve snippets de código no Obsidian com inteligência artificial. Esta extensão permite que você selecione trechos de código no VS Code e envie para o Obsidian, com descrições automáticas geradas por IA.",
+  "publisher": "ZX-Code",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "icon": "media/logo.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.saveSelection",
+        "title": "Salvar Seleção no Obsidian"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.saveSelection",
+        "key": "ctrl+alt+s",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "ZX - Obsidian Note AI Configuration",
+      "properties": {
+        "zxObsidianNoteAI.vaultPath": {
+          "type": "string",
+          "default": "",
+          "description": "Caminho da pasta onde o Obsidian armazena as notas. Exemplo: C:\\Users\\UserName\\Obsidian\\SecondBrain\\Notes"
+        },
+        "zxObsidianNoteAI.LMApiModel": {
+          "type": "string",
+          "default": "deepseek-r1-distill-qwen-7b",
+          "description": "Modelo de linguagem utilizado no LM Studio. Exemplo: deepseek-r1-distill-qwen-7b"
+        },
+        "zxObsidianNoteAI.Prompt": {
+          "type": "string",
+          "default": "Analise e explique de forma clara e resumida, em português, o que o seguinte trecho de código faz. Destaque as funcionalidades principais, lógica implementada e propósito geral.",
+          "description": "Prompt utilizado para gerar a descrição do código."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.98.0",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.23.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "prettier": "^3.5.3"
+  }
+}
