@@ -3,7 +3,7 @@
   "displayName": "ZX - Obsidian Note AI 📓🤖",
   "description": "Salve snippets de código no Obsidian com inteligência artificial. Esta extensão permite que você selecione trechos de código no VS Code e envie para o Obsidian, com descrições automáticas geradas por IA.",
   "publisher": "ZX-Code",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.98.0"
   },
