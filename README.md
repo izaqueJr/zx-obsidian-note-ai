@@ -19,7 +19,7 @@ ZX - Obsidian Note AI é uma extensão para o VS Code que permite salvar snippet
 
 ![Código do Snippet](./media/snippet-code.png)
 
-![Preview do Snippet](./media/snippet-preview.png)
+![Documentação do Snippet](./media/snippet-preview.png)
 
 
 ⚙️ Requisitos
