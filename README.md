@@ -50,8 +50,9 @@ Use o atalho padrão Ctrl+Alt+S ou execute o comando Salvar Seleção no Obsidia
 
 A nota será salva na pasta configurada no Obsidian com a descrição gerada pela IA.
 
-Desenvolvido por Izaque Rodrigues 
 Link para download: https://marketplace.visualstudio.com/items?itemName=ZX-CODE.zx-obsidian-note-ai
+
+Desenvolvido por Izaque Rodrigues 
 Github: https://github.com/izaqueJr
 
 📜 Licença
